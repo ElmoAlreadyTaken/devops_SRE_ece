@@ -1,0 +1,3 @@
+[submodule "LabExemple/ece-devops-2022-fall"]
+	path = LabExemple/ece-devops-2022-fall
+	url = https://github.com/ElmoAlreadyTaken/ece-devops-2022-fall
