@@ -1,0 +1,22 @@
+version: '2'
+
+networks:
+    test:
+      name: devops_test
+
+services:
+    devops_webserv:
+        container_name: devops_webserv
+        image: maiaitha/devops_webserv:latest
+        ports:
+            - "3000:3000"
+        networks:
+            - test
+
+    devops_client:
+        container_name: devops_client
+        image: maiaitha/devops_client:latest
+        ports:
+            - "3001:3001"
+        networks:
+            - test
