@@ -1,0 +1,20 @@
+---
+- hosts: all
+  tasks:
+    - name: Install Python
+      become: yes
+      apt:
+        name: python3
+        state: present
+
+    - name: Install Redis
+      become: yes
+      apt:
+        name: redis-server
+        state: present
+
+    - name: Install Flask
+      become: yes
+      pip:
+        name: Flask
+        state: present
