@@ -1,4 +1,4 @@
-FROM python:3.8
+FROM python:3.9.12
 
 WORKDIR /src
 COPY requirements.txt .
@@ -7,5 +7,5 @@ RUN pip install -r requirements.txt
 
 COPY src/ .
 
-EXPOSE 3000
-CMD [ "python", "./WebServer.py" , "./Client.py" ]
+EXPOSE 3001
+CMD [ "python", "./Client.py" ]
