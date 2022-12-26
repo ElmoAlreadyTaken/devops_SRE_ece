@@ -1,7 +1,7 @@
 version: '2'
 
 networks:
-    test:
+    devops_test:
       name: devops_test
 
 services:
@@ -11,7 +11,7 @@ services:
         ports:
             - "3000:3000"
         networks:
-            - test
+            - devops_test
 
     devops_client:
         container_name: devops_client
@@ -19,4 +19,4 @@ services:
         ports:
             - "3001:3001"
         networks:
-            - test
+            - devops_test
