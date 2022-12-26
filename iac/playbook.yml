@@ -1,10 +1,17 @@
 ---
 - hosts: all
   tasks:
+
     - name: Install Python
       become: yes
       apt:
         name: python3
+        state: present
+
+    - name: Install pip
+      become: yes
+      apt:
+        name: python3-pip
         state: present
 
     - name: Install Redis
@@ -17,4 +24,10 @@
       become: yes
       pip:
         name: Flask
+        state: present
+
+    - name: Install Uuid
+      become: yes
+      pip:
+        name: uuid
         state: present
