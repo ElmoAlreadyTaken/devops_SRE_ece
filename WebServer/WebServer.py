@@ -24,6 +24,10 @@ def create_user():
     r.hmset(f'user:{id}', {'name': name, 'email': email})
     return jsonify({'id': id, 'name': name, 'email': email})
 
+@app.route('/alive',methods=["GET"])
+def alive():
+    return "i'm alive"
+
 
 if __name__ == '__main__':
     app.run()

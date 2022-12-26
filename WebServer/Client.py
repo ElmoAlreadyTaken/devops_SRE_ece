@@ -16,5 +16,12 @@ def test_access_main_page():
     print(response)
     assert response.status_code == 200
 
+def test_alive():
+    response = requests.get('http://localhost:5000/alive')
+    print(response)
+    assert response.status_code == 200
+
+
 test_create_user()
 test_access_main_page()
+test_alive()
