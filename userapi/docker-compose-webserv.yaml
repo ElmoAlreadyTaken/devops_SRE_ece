@@ -13,10 +13,4 @@ services:
         networks:
             - devops_test
 
-    devops_client:
-        container_name: devops_client
-        image: maiaitha/devops_client:latest
-        ports:
-            - "3001:3001"
-        networks:
-            - devops_test
+    
