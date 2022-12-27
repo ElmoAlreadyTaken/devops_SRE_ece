@@ -1,0 +1,23 @@
+version: '3.3'
+
+services:
+    
+    webb_app:
+        container_name: web_app
+        image: maiaitha/web_app:latest
+        ports:
+            - "3000:3000"
+        depends_on:
+            - redis
+        environment:
+        - REDIS_HOST=redis
+        - REDIS_PORT=6379
+
+
+    redis:
+        container_name: redis
+        image: redis
+        environment:
+            - ALLOW_EMPTY_PASSWORD=yes
+        ports:
+            - "6379:6379"
