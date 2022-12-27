@@ -1,0 +1,35 @@
+version: '3'
+
+networks:
+    devops_test:
+      name: devops_test
+
+services:
+
+    redis:
+        container_name: redis
+        image: redis
+        environment:
+            - ALLOW_EMPTY_PASSWORD=yes
+        ports:
+            - "6379:6379"
+
+    devops_webserv:
+        container_name: devops_webserv
+        image: maiaitha/devops_webserv:latest
+        ports:
+            - "3000:3000"
+        networks:
+            - devops_test
+        depends_on:
+            - redis
+
+
+    devops_client:
+        container_name: devops_client
+        image: maiaitha/devops_client:latest
+        ports:
+            - "3001:3001"
+        networks:
+            - devops_test
+
