@@ -1,16 +1,19 @@
 ---
-- hosts: all
+- name: Install npm, Node.js, and Redis
+  hosts: all
+  become: true
   tasks:
+    - name: Install npm
+      package:
+        name: npm
+        state: present
 
-    - name: Install Python
-      become: yes
-      apt:
-        name: python3
+    - name: Install Node.js
+      package:
+        name: nodejs
         state: present
 
     - name: Install Redis
-      become: yes
-      apt:
-        name: redis-server
+      package:
+        name: redis
         state: present
-
