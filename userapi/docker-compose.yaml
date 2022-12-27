@@ -1,0 +1,19 @@
+version: '3.3'
+
+services:
+    db:
+        container_name: redis
+        image: redis
+        environment:
+            - ALLOW_EMPTY_PASSWORD=yes
+        ports:
+            - "6379:6379"
+
+    webb_app:
+        container_name: webb_app
+        image: maiaitha/webb_app:latest
+        ports:
+            - "3000:3000"
+        depends_on:
+            - db
+    
