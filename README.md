@@ -1,20 +1,70 @@
-# devops_SRE_ece
+# Devops Project - Web Application
 
-Misha Setta's, Nassim Si-Mohammed's and Axel Pape's proof of work.
-You will find the lab's work here.
+## Introduction :
+Devops project for ECE.
+Group : Nassim SI MOHAMMED, Misha SETTA, Axel PAPE.
+Teachers : Sergei KUDINOV & Gonzalo ETSE
 
-1. Create a web application
+Original instructions git : https://github.com/adaltas/ece-devops-2022-fall/blob/main/project/instructions.md
 
-2. Apply CI/CD pipeline
+We've use the web_app developped in js instead of the one we've developped in python (you can found it on /userapi_py, it works) .
+## Prerequisites
 
-3. Configure and provision a virtual environment and run your application using the IaC approach
+* Nodejs
+* Npm
+* Vagrant
+* VirtualBox
+* docker
+* docker-compose (V2)
+* Kubernetes (k8s)
 
-4. Build Docker image of your application
+## Getting Started
 
-5. Make container orchestration using Docker Compose
+```
+git clone https://github.com/ElmoAlreadyTaken/devops_SRE_ece.git
+```
 
-6. Make docker orchestration using Kubernetes
+## Bring up the webapp in local
 
-7. Make a service mesh using Istio
+In one terminal :
+```
+cd userapi
+redis-server
+```
 
-8. Implement Monitoring to your containerized application
+In a second terminal :
+```
+cd userapi
+npm install
+npm start
+```
+
+In a third one :
+```
+curl --header "Content-Type: application/json" \
+  --request POST \
+  --data '{"username":"sergkudinov","firstname":"sergei","lastname":"kudinov"}' \
+  http://localhost:3000/user
+```
+
+You should have as output :
+```
+{"status":"success","msg":"OK"}
+```
+
+## Bring up the Virtual Machine
+
+```
+cd iac
+vagrant up
+```
+
+## Bring up docker compose
+
+```
+cd ..
+cd userapi
+docker-compose up
+```
+
+# Enjoy !
