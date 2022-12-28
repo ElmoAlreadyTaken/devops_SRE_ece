@@ -9,7 +9,7 @@ services:
         container_name: web_app
         image: maiaitha/web_app:latest
         ports:
-            - "5000:5000"
+            - "3000:3000"
         depends_on:
             - redis
         environment:
