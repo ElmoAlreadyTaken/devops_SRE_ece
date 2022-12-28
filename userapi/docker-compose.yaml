@@ -10,8 +10,6 @@ services:
         image: maiaitha/web_app:latest
         ports:
             - "3000:3000"
-        depends_on:
-            - redis
         environment:
         - REDIS_HOST=redis
         - REDIS_PORT=6379
@@ -21,7 +19,8 @@ services:
 
     redis:
         container_name: redis
-        image: redis
+        image: redis:latest
+        command: ["redis-server", "--bind", "redis", "--port", "6379"]
         ports:
             - "6379:6379"
         networks:
