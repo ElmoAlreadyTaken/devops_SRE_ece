@@ -1,9 +1,9 @@
 # Devops Project - Web Application
 
 ## Introduction :
-Devops project for ECE.
-Group : Nassim SI MOHAMMED, Misha SETTA, Axel PAPE.
-Teachers : Sergei KUDINOV & Gonzalo ETSE
+*Devops project for ECE.
+*Group : Nassim SI MOHAMMED, Misha SETTA, Axel PAPE.
+*Teachers : Sergei KUDINOV & Gonzalo ETSE
 
 Original instructions git : https://github.com/adaltas/ece-devops-2022-fall/blob/main/project/instructions.md
 
