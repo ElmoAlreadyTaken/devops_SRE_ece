@@ -68,4 +68,14 @@ cd userapi
 docker-compose up
 ```
 
+You should be able to see 2 containers, redis and webapp.
+
+In a terminal try
+```
+curl --header "Content-Type: application/json" \
+  --request POST \
+  --data '{"username":"sergkudinov","firstname":"sergei","lastname":"kudinov"}' \
+  http://localhost:3000/user
+```
+
 # Enjoy !
