@@ -5,9 +5,10 @@
 * Group : Nassim SI MOHAMMED, Misha SETTA, Axel PAPE.
 * Teachers : Sergei KUDINOV & Gonzalo ETSE
 
-Original instructions git : https://github.com/adaltas/ece-devops-2022-fall/blob/main/project/instructions.md
+* Original instructions git : https://github.com/adaltas/ece-devops-2022-fall/blob/main/project/instructions.md
 
 We've use the web_app developped in js instead of the one we've developped in python (you can found it on /userapi_py, it works) .
+
 ## Prerequisites
 
 * Nodejs
